@@ -86,6 +86,7 @@ public class SocialMediaController {
     @GetMapping(value = "/accounts/{account_id}/messages")
     public List<Message> getAllMessagesByAccountId(@PathVariable(value = "account_id") int account_id) {
         return msgService.getAllMessagesByAccountId(account_id);
+        
     }
 
     @ExceptionHandler({IllegalArgumentException.class})
